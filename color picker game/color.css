@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.container {
+  display: grid;
+  grid-template-rows: 15vh 80vh 15vh;
+  grid-template-columns: 5vw 90vw 5vw;
+  background-image: url(photography-of-stars-and-galaxy-1376766.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 300ms ease-in-out;
+  grid-template-areas:
+    ". header ."
+    ". main ."
+    ".  .  .";
+}
+.header {
+  grid-area: header;
+  color: aliceblue;
+}
+.main {
+  grid-area: main;
+
+  display: grid;
+  grid-template-rows: 20fr 80fr;
+}
+.optionmenu {
+}
+.circles {
+  border: 2px solid black;
+  background: teal;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.circle {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  transition: all 300ms ease-in-out;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset {
+  height: 50px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 50px;
+  background: green;
+}

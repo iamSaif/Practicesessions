@@ -1,0 +1,27 @@
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
+function RGBgen() {
+  return `rgb(${getRandomInt(0, 255)},${getRandomInt(0, 255)},${getRandomInt(
+    0,
+    255
+  )})`;
+}
+
+var circlescontainer = document.querySelector(".circles");
+for (var i = 0; i < 6; i++) {
+  circlescontainer.insertAdjacentHTML(
+    "beforeend",
+    `<div class="circlewrapper flex ">
+    <div style="background:${RGBgen()}" class="circle"></div>
+  </div>`
+  );
+}
+var answer = null;
+var circles = Array.from(document.querySelectorAll(".circle"));
+var randomnumforanswer = getRandomInt(0, 6);
+answer = circles[randomnumforanswer].style.background;
+var ansnode = document.querySelector(".answer");
+console.log(answer);
